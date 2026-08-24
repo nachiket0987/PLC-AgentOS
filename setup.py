@@ -1,12 +1,12 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="AutoPLC-Studio",
+    name="PLC-AgentOS",
     version="1.0.0",
-    description="Multi-Agent System for Industrial PLC Structured Text Code Generation, Formal Verification, and RAG Reasoning",
+    description="Multi-Agent Operating Framework for Industrial PLC Structured Text Code Generation, Formal Verification, and RAG Reasoning",
     author="Nachiket Gadilohar",
     author_email="nachiketlohar0306@gmail.com",
-    url="https://github.com/nachiket0987/AutoPLC-Studio",
+    url="https://github.com/nachiket0987/PLC-AgentOS",
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",

@@ -1,18 +1,17 @@
-# 🏭 AutoPLC-Studio: Multi-Agent Industrial PLC Code Synthesis & Formal Verification System
+# 🏭 PLC-AgentOS: Multi-Agent Operating Framework for Industrial PLC Synthesis & Verification
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)
 ![IEC 61131-3](https://img.shields.io/badge/Standard-IEC%2061131--3-green?logo=microchip&logoColor=white)
 ![Multi-Agent](https://img.shields.io/badge/Architecture-Multi--Agent%20RAG-orange)
-![License](https://img.shields.io/badge/License-MIT-yellow)
 ![Author](https://img.shields.io/badge/Author-Nachiket%20Gadilohar-purple)
 
-**AutoPLC-Studio** is an enterprise-grade multi-agent AI environment designed for industrial control engineering. It automates the end-to-end process of retrieving industrial patterns, planning sequential control logic, synthesizing **IEC 61131-3 Structured Text (ST)** code, formally verifying safety properties (LTL/CTL logic), and executing Chain-of-Thought (CoT) debugging for Programmable Logic Controllers (PLCs).
+**PLC-AgentOS** is an enterprise-grade multi-agent operating framework designed for industrial control engineering. It automates the end-to-end process of retrieving industrial patterns, planning sequential control logic, synthesizing **IEC 61131-3 Structured Text (ST)** code, formally verifying safety properties (LTL/CTL logic), and executing Chain-of-Thought (CoT) debugging for Programmable Logic Controllers (PLCs).
 
 ---
 
 ## 🌟 Key Features
 
-- **🤖 6-Agent Orchestration Workflow**: Central orchestrator controlling specialized agents (Retrieval, Planning, Coding, Validation, Debugging).
+- **🤖 6-Agent Orchestration Workflow**: Central orchestrator controlling specialized sub-agents (Retrieval, Planning, Coding, Validation, Debugging).
 - **📚 Industrial RAG Knowledge Base**: Validated control patterns for wastewater treatment, multi-station manufacturing assembly lines, ASRS material handling, and OSCAT libraries (`PID_3TERM`, `SCALE_X_R`, `PUMP_CTRL_3`).
 - **🛡️ Formal Verification & Safety Interlocks**: Automatic property generation (LTL/CTL specs) for model checkers like NuSMV/CBMC and safety interlock enforcement (`E-Stop`, low-flow cutoffs).
 - **🐛 Chain-of-Thought (CoT) Error Repair**: Closed-loop debugging cycle that analyzes compiler output and applies minimal logic corrections.
@@ -49,15 +48,15 @@ flowchart TD
 ### 1. Installation
 Clone the repository:
 ```bash
-git clone https://github.com/nachiket0987/AutoPLC-Studio.git
-cd AutoPLC-Studio
+git clone https://github.com/nachiket0987/PLC-AgentOS.git
+cd PLC-AgentOS
 pip install -e .
 ```
 
 ### 2. Configure Agents in Claude Code
 Create the core agents:
 ```bash
-/agent create orchestrator "AutoPLC Workflow Orchestrator"
+/agent create orchestrator "PLC-AgentOS Workflow Orchestrator"
 /agent create retrieval "PLC Knowledge Retrieval Agent"
 /agent create planning "PLC Implementation Planning Agent"
 /agent create coding "ST Code Generation Agent"
