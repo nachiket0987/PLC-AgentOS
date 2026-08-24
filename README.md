@@ -24,13 +24,13 @@
 
 ```mermaid
 flowchart TD
-    User([User Requirement]) --> Orchestrator[@orchestrator Workflow Orchestrator]
-    Orchestrator --> Retrieval[@retrieval Knowledge Base Search]
-    Retrieval --> Planning[@planning Implementation Planner]
-    Planning --> Coding[@coding ST Generator]
-    Coding --> Validation[@validation Syntax & Formal Verifier]
-    Validation -->|Pass| VerifiedCode([Verified ST Program])
-    Validation -->|Fail| Debugging[@debugging CoT Error Repair]
+    User(["User Requirement"]) --> Orchestrator["@orchestrator Workflow Orchestrator"]
+    Orchestrator --> Retrieval["@retrieval Knowledge Base Search"]
+    Retrieval --> Planning["@planning Implementation Planner"]
+    Planning --> Coding["@coding ST Generator"]
+    Coding --> Validation["@validation Syntax & Formal Verifier"]
+    Validation -->|Pass| VerifiedCode(["Verified ST Program"])
+    Validation -->|Fail| Debugging["@debugging CoT Error Repair"]
     Debugging --> Coding
 ```
 
