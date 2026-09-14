@@ -6,5 +6,6 @@
 ---
 
 ## 1. Functional Requirements
-- **FR-GEN-01**: System MUST output valid IEC 61131-3 Structured Text.
-- **FR-VER-01**: System MUST flag safety violations and output counter-examples if formal verification fails.
+- **FR-ST-01**: Generated code MUST strictly comply with IEC 61131-3 Structured Text syntax rules.
+- **FR-VER-01**: Formal verifier MUST model PLC scan cycle execution and prove temporal safety properties using Z3 SMT solvers.
+- **FR-VER-02**: If verification fails, system MUST return an explicit counter-example trace illustrating the safety violation state.
