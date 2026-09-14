@@ -5,7 +5,14 @@
 
 ---
 
-## 1. Architecture Layout
-- **CodeGen Agent**: LLM agent fine-tuned on IEC 61131-3 code patterns.
-- **Verifier Agent**: Formulates safety propositions and verifies via Z3 Theorem Prover.
-- **Knowledge RAG**: Vector index over industrial automation standards.
+## 1. System Architecture Diagram
+
+```mermaid
+graph TB
+    Spec["Natural Language Specs"] --> CodeGen["CodeGen Agent (LLM)"]
+    CodeGen --> STCode["IEC 61131-3 Structured Text"]
+    STCode --> Verifier["Formal Verification Agent (Z3 Solver)"]
+    Verifier -->|"Verified OK"| Export["PLC Deployment Artifact"]
+    Verifier -->|"Counter-Example Violation"| Refiner["Self-Refinement Agent"]
+    Refiner --> CodeGen
+```
