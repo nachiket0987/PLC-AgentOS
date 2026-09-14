@@ -5,5 +5,6 @@
 
 ---
 
-## 1. IDE Interface Specification
-- Dark IDE interface featuring Code Editor (Structured Text with syntax highlighting), Formal Verification Status Drawer, and RAG Reference Panel.
+## 1. Interface Specification
+- **Theme**: Dark Industrial IDE Theme (#0f172a / #1e293b).
+- **Layout**: Left: Natural language prompt & ST code editor; Top-Right: Z3 Formal Verification status drawer; Bottom-Right: Industrial RAG reference panel.
