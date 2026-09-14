@@ -5,7 +5,7 @@
 
 ---
 
-## 1. Milestones
-- [x] Structured Text generation module.
-- [x] Formal logic Z3 verification adapter.
-- [x] Vector index for PLC manuals.
+## 1. Roadmap
+- [x] IEC 61131-3 CodeGen LLM agent prompt pipeline.
+- [x] Z3 Theorem Prover integration for PLC state verification.
+- [x] Industrial PLC RAG vector index.
